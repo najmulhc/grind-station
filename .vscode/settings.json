@@ -1,0 +1,33 @@
+{
+  "files.associations": {
+    "chrono": "cpp",
+    "span": "cpp",
+    "numeric": "cpp",
+    "iostream": "cpp",
+    "*.tcc": "cpp"
+  },
+  "editor.fontLigatures": true,
+  "editor.formatOnSave": true,
+  "editor.fontFamily": "Monaco",
+  "workbench.colorTheme": "Serendipity Midnight",
+  "terminal.integrated.fontSize": 16,
+  "editor.defaultFormatter": "ms-vscode.cpptools",
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.fontWeight": 500,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.cursorBlinking": "smooth",
+  "editor.fontSize": 24,
+  "editor.minimap.enabled": false,
+  "editor.wordWrap": "on",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "scope": ["storage.type", "comment", "keyword", "keyword.control"],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+   
+}
