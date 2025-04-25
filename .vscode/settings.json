@@ -4,13 +4,14 @@
     "span": "cpp",
     "numeric": "cpp",
     "iostream": "cpp",
-    "*.tcc": "cpp"
+    "*.tcc": "cpp",
+    "map": "cpp"
   },
   "editor.fontLigatures": true,
   "editor.formatOnSave": true,
   "editor.fontFamily": "Monaco",
   "workbench.colorTheme": "Serendipity Midnight",
-  "terminal.integrated.fontSize": 16,
+  "terminal.integrated.fontSize": 20,
   "editor.defaultFormatter": "ms-vscode.cpptools",
   "terminal.integrated.fontFamily": "Hack Nerd Font",
   "terminal.integrated.fontWeight": 500,
