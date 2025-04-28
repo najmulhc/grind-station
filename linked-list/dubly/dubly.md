@@ -1,18 +1,18 @@
 # 💻 Doubly Linked List (C++ Edition) - Mastery Checklist
 
 ## 📦 Core Setup
-- [ ] Define a DLL Node struct with `int data`, `Node* prev`, and `Node* next`
-- [ ] Build a basic DLL manually (create 3–5 nodes and link them)
+- [x] Define a DLL Node struct with `int data`, `Node* prev`, and `Node* next`
+- [x] Build a basic DLL manually (create 3–5 nodes and link them)
 
 ## 🚶 Traversal (Basics)
-- [ ] Traverse DLL forward (`while (node != nullptr)`)
-- [ ] Traverse DLL backward (`while (node != nullptr)` using `prev`)
-- [ ] Print list in both directions to verify `prev` and `next` pointers
+- [x] Traverse DLL forward (`while (node != nullptr)`)
+- [x] Traverse DLL backward (`while (node != nullptr)` using `prev`)
+- [x] Print list in both directions to verify `prev` and `next` pointers
 
 ## ➕ Insertion Operations
-- [ ] Insert node at the head
-- [ ] Insert node at the tail
-- [ ] Insert at a given index (0-based or 1-based — your call, but be consistent)
+- [x] Insert node at the head
+- [x] Insert node at the tail
+- [x] Insert at a given index (0-based or 1-based — your call, but be consistent)
 - [ ] Insert before a node with given value
 - [ ] Insert after a node with given value
 

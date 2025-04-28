@@ -49,35 +49,55 @@ void print(ListNode *head)
     }
 }
 
-ListNode *reverse(ListNode *head)
+ListNode *main()
 {
-    if (head->next == nullptr)
+    vector<int> arr = {1 , 2 , 3, 4, 5 , 6};
+    ListNode *head = create_linked_list(arr);
+
+    ListNode *oddHead = head;
+    ListNode *oddTail = oddHead;
+
+    if (oddTail == nullptr)
     {
         return head;
     }
-    else
+
+    ListNode *evenHead = oddHead->next;
+    ListNode *evenTail = evenHead;
+
+    if (evenTail == nullptr)
     {
-        ListNode *newHead = new ListNode(head->val);
-        ListNode *prev = reverse(head->next);
-        ListNode *copy = prev;
-        while (copy->next != nullptr)
-        {
-            copy = copy->next;
-        }
-        copy->next = newHead;
-
-        return prev;
+        return head;
     }
-}
 
-int main()
-{
-    vector<int> nums = {1, 2, 3, 4};
-    ListNode *head = create_linked_list(nums);
+    ListNode *candidate = evenTail->next;
+    if (candidate == nullptr)
+    {
+        return head;
+    }
 
-    ListNode *reversed = reverse(head);
+    // Rewire first odd pickup
+    evenTail->next = candidate->next;
+    oddTail->next = candidate;
+    candidate->next = evenHead;
 
-    print(reversed);
+    while (evenTail->next != nullptr)
+    {
+        oddTail = oddTail->next;
+        evenTail = evenTail->next;
+        candidate = evenTail->next;
 
-    return 0;
+        if (candidate != nullptr)
+        {
+            evenTail->next = candidate->next;
+            oddTail->next = candidate;
+            candidate->next = evenHead;
+        }
+        else
+        {
+            break;
+        }
+    }
+
+    return head;
 }

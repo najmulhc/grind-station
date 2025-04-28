@@ -49,35 +49,48 @@ void print(ListNode *head)
     }
 }
 
-ListNode *reverse(ListNode *head)
-{
-    if (head->next == nullptr)
-    {
-        return head;
-    }
-    else
-    {
-        ListNode *newHead = new ListNode(head->val);
-        ListNode *prev = reverse(head->next);
-        ListNode *copy = prev;
-        while (copy->next != nullptr)
-        {
-            copy = copy->next;
-        }
-        copy->next = newHead;
-
-        return prev;
-    }
-}
-
 int main()
 {
-    vector<int> nums = {1, 2, 3, 4};
-    ListNode *head = create_linked_list(nums);
+    vector<int> arr = { 1, 2};
+    ListNode *head = create_linked_list(arr);
 
-    ListNode *reversed = reverse(head);
+    int n = 1;
 
-    print(reversed);
+    int size = 0;
 
+    ListNode *copy = head;
+    ListNode *iterator = head;
+    while (copy != nullptr)
+    {
+
+        size++;
+        copy = copy->next;
+    }
+
+    int count = 0;
+
+    n = size - (n -1);
+    while (iterator != nullptr)
+    {
+        count++;
+        if (count == n && n != size)
+        {
+
+            ListNode *elem = iterator;
+            ListNode *next = elem->next;
+
+            elem->val = next->val;
+            elem->next = next->next;
+        }
+      if(n == size && count == n-1) { 
+          ListNode *item = iterator;
+          item->next = nullptr;
+          break; 
+      }
+        iterator = iterator->next;
+    }
+
+    
+    print(head);
     return 0;
 }
